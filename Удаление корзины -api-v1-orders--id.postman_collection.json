@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "e8259490-99ec-427d-b922-489eff9accca",
+		"name": "Удаление корзины /api/v1/orders/:id",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35091881"
+	},
+	"item": [
+		{
+			"name": "Общая проверка",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://3b5af427-5f78-402a-b631-7574deabe878.serverhub.praktikum-services.ru/api/v1/orders/6",
+					"protocol": "https",
+					"host": [
+						"3b5af427-5f78-402a-b631-7574deabe878",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "несуществующий id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://3b5af427-5f78-402a-b631-7574deabe878.serverhub.praktikum-services.ru/api/v1/orders/60",
+					"protocol": "https",
+					"host": [
+						"3b5af427-5f78-402a-b631-7574deabe878",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"60"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "буквенный id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://3b5af427-5f78-402a-b631-7574deabe878.serverhub.praktikum-services.ru/api/v1/orders/FF",
+					"protocol": "https",
+					"host": [
+						"3b5af427-5f78-402a-b631-7574deabe878",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"FF"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "отрицательный id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://3b5af427-5f78-402a-b631-7574deabe878.serverhub.praktikum-services.ru/api/v1/orders/-1",
+					"protocol": "https",
+					"host": [
+						"3b5af427-5f78-402a-b631-7574deabe878",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "id со спецсимволом",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://3b5af427-5f78-402a-b631-7574deabe878.serverhub.praktikum-services.ru/api/v1/orders/#",
+					"protocol": "https",
+					"host": [
+						"3b5af427-5f78-402a-b631-7574deabe878",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						""
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "4cc83644-9de0-4a77-907f-f932cf249219",
+		"name": "Получение продуктов в корзине /api/v1/orders/id",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35091881"
+	},
+	"item": [
+		{
+			"name": "без авторизации",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://15db594a-1661-406d-9dd1-94af06688b06.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"15db594a-1661-406d-9dd1-94af06688b06",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Авторизация",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5ea22edb-423e-41b9-af8f-ebf959650f32",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://15db594a-1661-406d-9dd1-94af06688b06.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"15db594a-1661-406d-9dd1-94af06688b06",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "без id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://15db594a-1661-406d-9dd1-94af06688b06.serverhub.praktikum-services.ru/api/v1/orders/",
+					"protocol": "https",
+					"host": [
+						"15db594a-1661-406d-9dd1-94af06688b06",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "отрицательный id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://15db594a-1661-406d-9dd1-94af06688b06.serverhub.praktikum-services.ru/api/v1/orders/-2",
+					"protocol": "https",
+					"host": [
+						"15db594a-1661-406d-9dd1-94af06688b06",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"-2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "несуществующий id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://15db594a-1661-406d-9dd1-94af06688b06.serverhub.praktikum-services.ru/api/v1/orders/999",
+					"protocol": "https",
+					"host": [
+						"15db594a-1661-406d-9dd1-94af06688b06",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Буквенный id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
